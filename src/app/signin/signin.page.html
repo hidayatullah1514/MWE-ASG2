@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="text-align: center;font-size: 20px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"size= 12px size-sm>MovieFlix</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/index"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row justify-content-center>
+    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+      <div text-center>
+        <h2>Login Form</h2>
+      </div>
+      <div padding>
+        <ion-item>
+          <ion-input name="Email Address" type="Email" placeholder="your@email.com"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="Password" type="password" placeholder="Password"></ion-input>
+        </ion-item>
+      </div>
+      <div padding>
+        <ion-button href="tabs/tab1" expand="block">Login</ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
