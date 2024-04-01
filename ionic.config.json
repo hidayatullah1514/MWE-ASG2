@@ -1,0 +1,7 @@
+{
+  "name": "movieflix",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
