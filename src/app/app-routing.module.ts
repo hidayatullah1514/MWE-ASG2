@@ -17,6 +17,18 @@ const routes: Routes = [
   {
     path: 'signin',
     loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
+  },
+  {
+    path: 'tab4.1',
+    loadChildren: () => import('./tab4.1/tab4.1.module').then( m => m.Tab41PageModule)
+  },
+  {
+    path: 'tab4.2',
+    loadChildren: () => import('./tab4.2/tab4.2.module').then( m => m.Tab42PageModule)
+  },
+  {
+    path: 'tab4.3',
+    loadChildren: () => import('./tab4.3/tab4.3.module').then( m => m.Tab43PageModule)
   }
 ];
 @NgModule({
