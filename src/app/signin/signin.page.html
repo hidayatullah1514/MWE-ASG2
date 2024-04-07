@@ -7,27 +7,35 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-<ion-content>
-<ion-grid>
-  <ion-row justify-content-center>
-    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-      <div text-center>
-        <h2>Login Form</h2>
-      </div>
-      <div padding>
-        <ion-item>
-          <ion-input name="Email Address" type="Email" placeholder="your@email.com" required="yes"></ion-input>
-        </ion-item>
+  <ion-content>
+    <form #loginForm="ngForm">
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h2>Login Form</h2>
+            </div>
+            <div padding>
+              <ion-item>
+                <ion-input name="Email Address" type="Email" placeholder="your@email.com" required="yes" #email="ngModel" ngModel></ion-input>
+              </ion-item>
+              <ion-item *ngIf="email.errors?.['required'] && email.touched">
+                Email is required
+              </ion-item>
 
-        <ion-item>
-          <ion-input name="Password" type="password" placeholder="Password " required="yes"></ion-input>
-        </ion-item>
-      </div>
-      <div padding>
-        <ion-button href="tabs/tab1" expand="block">Login</ion-button>
-      </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-
+              <ion-item>
+                <ion-input name="Password" type="password" placeholder="Password " required="yes" #password="ngModel" ngModel></ion-input>
+              </ion-item>
+              <ion-item *ngIf="password.errors?.['required'] && password.touched">
+                Password is required
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button [disabled]="!loginForm.form.valid" href="tabs/tab1" expand="block">Login</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>
 </ion-content>

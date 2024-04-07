@@ -10,6 +10,7 @@ export class SigninPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // intentionally empty
   }
 
 }

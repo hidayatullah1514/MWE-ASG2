@@ -29,6 +29,38 @@ const routes: Routes = [
   {
     path: 'tab4.3',
     loadChildren: () => import('./tab4.3/tab4.3.module').then( m => m.Tab43PageModule)
+  },
+  {
+    path: 'tab5',
+    loadChildren: () => import('./tab5/tab5.module').then( m => m.Tab5PageModule)
+  },
+  {
+    path: 'tab5.1',
+    loadChildren: () => import('./tab5.1/tab5.1.module').then( m => m.Tab51PageModule)
+  },
+  {
+    path: 'tab5.2',
+    loadChildren: () => import('./tab5.2/tab5.2.module').then( m => m.Tab52PageModule)
+  },
+  {
+    path: 'tab5.3',
+    loadChildren: () => import('./tab5.3/tab5.3.module').then( m => m.Tab53PageModule)
+  },
+  {
+    path: 'tab6',
+    loadChildren: () => import('./tab6/tab6.module').then( m => m.Tab6PageModule)
+  },
+  {
+    path: 'tab6.1',
+    loadChildren: () => import('./tab6.1/tab6.1.module').then( m => m.Tab61PageModule)
+  },
+  {
+    path: 'tab6.2',
+    loadChildren: () => import('./tab6.2/tab6.2.module').then( m => m.Tab62PageModule)
+  },
+  {
+    path: 'tab6.3',
+    loadChildren: () => import('./tab6.3/tab6.3.module').then( m => m.Tab63PageModule)
   }
 ];
 @NgModule({
